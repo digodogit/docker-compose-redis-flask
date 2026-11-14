@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Salvar no Redis</title>
+</head>
+<body>
+  <h1>Salvar no Redis</h1>
+
+  {% if sucesso %}<p>{{ sucesso }}</p>{% endif %}
+  {% if erro %}<p>{{ erro }}</p>{% endif %}
+
+  <form method="post" action="/">
+    <p><label>Chave: <input type="text" name="chave" value="{{ chave or '' }}"></label></p>
+    <p><label>Valor: <input type="text" name="valor" value="{{ valor or '' }}"></label></p>
+    <p><button type="submit">Salvar</button></p>
+  </form>
+</body>
+</html>
